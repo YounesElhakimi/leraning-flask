@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% assets "css_all" %}
+        <link rel="stylesheet" href="{{ASSET_URL}}">
+    {% endassets %}    
+
+    <h1>welcome index page</h1> 
+    <div class="posts">
+        <h2 class="posts-title">All posts</h2>
+        <ul class="posts">
+            
+            {% for post in posts %}
+                <li>{{post}}</li> 
+            {% endfor %}
+        </ul>
+    </div>
+    
+    
+</body>
+</html>
